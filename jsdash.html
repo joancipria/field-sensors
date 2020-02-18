@@ -1,0 +1,476 @@
+<!doctype html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<html lang="en">
+
+<head>
+  <script>
+    if (localStorage.token == undefined || localStorage.token == "" || !localStorage.token || localStorage.token ==
+      "undefined") {
+      location.href = "index.html"
+    }
+  </script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <title>Field Sensors | Inicio</title>
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+  <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#3372DF">
+
+  <link rel="shortcut icon" href="images/favicon.png">
+
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="css/material.cyan-light_blue.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .map-pannel{
+    position: relative;
+    width: 100%;
+    height: 30vh;  
+}
+
+    .chart-pannel{
+}
+    .map-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.mdl-radio{
+  margin-left: 10px;
+}
+  </style>
+  <script src="js/Chart.bundle.js"></script>
+  <script src="js/utils.js"></script>
+</head>
+
+<body>
+  <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+      <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+          <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">Inicio</span>
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+            </div>
+          </div>
+        </header>
+    <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+      <header class="demo-drawer-header">
+        <img id="avatar-img" src="images/user.jpg" class="demo-avatar">
+        <div class="demo-avatar-dropdown">
+          <span id="email"></span>
+          <div class="mdl-layout-spacer"></div>
+          <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">arrow_drop_down</i>
+            <span class="visuallyhidden">Accounts</span>
+          </button>
+          <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
+            <li class="mdl-menu__item">hello@example.com</li>
+            <li class="mdl-menu__item">info@example.com</li>
+            <li class="mdl-menu__item">
+              <i class="material-icons">add</i>Add another account...</li>
+          </ul>
+        </div>
+      </header>
+      <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
+        <a class="mdl-navigation__link" href="dashboard.html">
+          <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Inicio</a>
+        <a class="mdl-navigation__link" href="map.html">
+          <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">map</i>Mapa</a>
+          <a class="mdl-navigation__link" href="qr.html">
+            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">camera</i>QR Scanner</a>
+        <!--
+          <a class="mdl-navigation__link" href="">
+            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i>Trash</a>
+          <a class="mdl-navigation__link" href="">
+            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">report</i>Spam</a>
+          <a class="mdl-navigation__link" href="">
+            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Forums</a>
+          <a class="mdl-navigation__link" href="">
+            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">flag</i>Updates</a>
+          <a class="mdl-navigation__link" href="">
+            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">local_offer</i>Promos</a>
+          <a class="mdl-navigation__link" href="">
+            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">shopping_cart</i>Purchases</a>
+          <a class="mdl-navigation__link" href="">
+            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>Social</a>
+          <div class="mdl-layout-spacer"></div>-->
+        <a class="mdl-navigation__link" href="">
+          <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help</i>Ayuda</a>
+      </nav>
+    </div>
+    <main class="mdl-layout__content mdl-color--grey-100">
+        <div class="mdl-grid demo-content">
+
+
+            <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+
+
+
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <select class="mdl-textfield__input" onchange="getSensores();" name="fields" id="fields-selector">
+                        <option value="0">Selecciona un campo</option>
+                      </select>
+                      <label class="mdl-textfield__label" for="octane">Campo</label>
+                    </div>
+
+
+                    <label class = "mdl-radio mdl-js-radio" for = "option1">
+                        <input type = "radio" id = "option1" name = "chart" 
+                           class = "mdl-radio__button" checked>
+                        <span class = "mdl-radio__label">Gráfica 1</span>
+                     </label>
+
+                     <label class = "mdl-radio mdl-js-radio mdl-js-ripple-effect" 
+                     for = "option2">
+                     <input type = "radio" id = "option2" name = "chart" 
+                        class = "mdl-radio__button" >
+                     <span class = "mdl-radio__label">Gráfica 2</span>
+                  </label>
+            </div>
+
+          <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid map-pannel">
+              <div class="map-wrapper">
+                  <div id="mapa" style="width:100%;height:100%;"></div>
+              </div>
+          </div>
+
+          <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--6-col mdl-grid chart-pannel">
+              <div style="width:100%;">
+                  <canvas id="canvas"></canvas>
+                </div>            
+          </div>
+
+          <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--6-col mdl-grid chart-pannel">
+              <div style="width:100%;">
+                  <canvas id="canvas2"></canvas>
+                </div>            
+          </div>
+
+
+        </div>
+      </main>
+  </div>
+
+
+
+
+  <script src="js/material.min.js"></script>
+  <script>
+    document.getElementById("avatar-img").src = localStorage.avatar;
+    document.getElementById("email").innerHTML = localStorage.email;
+  </script>
+
+  <script type="text/javascript">
+    // Get Campos    
+    let fieldList = document.getElementById("fields-selector");
+
+    const myHeaders = new Headers();
+    myHeaders.append('authorization', `Bearer ${localStorage.token}`)
+
+    fetch('http://localhost:3000/api/fields/' + localStorage.email, {
+        method: 'GET',
+        headers: myHeaders
+      })
+      .then(res => res.json())
+      .then(data => {
+        data.fields.map(field => {
+          let text = document.createTextNode(field.name)
+          let elem = document.createElement('option')
+          elem.value = field._id
+          elem.appendChild(text)
+          fieldList.appendChild(elem)
+          //console.log(data)
+        })
+
+        //document.getElementsByClassName('mdl-card__supporting-text mdl-color-text--grey-600')[0].appendChild(productList)
+      })
+
+
+    // Get sensores
+    function getSensores() {
+      deleteMarkers();
+      let sensorList = document.getElementById("sensors-selector");
+      let selectedField = document.getElementById("fields-selector").value;
+
+      const myHeaders = new Headers();
+      myHeaders.append('authorization', `Bearer ${localStorage.token}`)
+
+      fetch('http://localhost:3000/api/field/' + selectedField + '/sensors', {
+          method: 'GET',
+          headers: myHeaders
+        })
+        .then(res => res.json())
+        .then(data => {
+          data.sensors.map(sensor => {
+            let coords = {
+              lat: parseFloat(sensor.latitude),
+              lng: parseFloat(sensor.altitude)
+            };
+
+            let marker = new google.maps.Marker({
+              position: coords,
+              map: map,
+              icon: 'img/marker.png',
+              title: sensor.mac,
+              sensorId: sensor._id
+            });
+
+            marker.app
+
+            map.setZoom(14);
+
+            marker.addListener('click', function () {
+              getData(marker.sensorId);
+            });
+
+            moveToLocation(coords.lat, coords.lng);
+          })
+          //document.getElementsByClassName('mdl-card__supporting-text mdl-color-text--grey-600')[0].appendChild(productList)
+        })
+    }
+  </script>
+  <script>
+    // In the following example, markers appear when the user clicks on the map.
+    // The markers are stored in an array.
+    // The user can then click an option to hide, show or delete the markers.
+    var map;
+    var markers = [];
+
+    function initMap() {
+      var haightAshbury = {
+        lat: 0,
+        lng: 0
+      };
+
+      map = new google.maps.Map(document.getElementById('mapa'), {
+        zoom: 2,
+        center: haightAshbury,
+        mapTypeId: 'satellite'
+      });
+    }
+
+    // Adds a marker to the map and push to the array.
+    function addMarker(location) {
+      var marker = new google.maps.Marker({
+        position: location,
+        map: map
+      });
+      markers.push(marker);
+    }
+
+    // Sets the map on all markers in the array.
+    function setMapOnAll(map) {
+      for (var i = 0; i < markers.length; i++) {
+        markers[i].setMap(map);
+      }
+    }
+
+    // Removes the markers from the map, but keeps them in the array.
+    function clearMarkers() {
+      setMapOnAll(null);
+    }
+
+    // Shows any markers currently in the array.
+    function showMarkers() {
+      setMapOnAll(map);
+    }
+
+    // Deletes all markers in the array by removing references to them.
+    function deleteMarkers() {
+      clearMarkers();
+      markers = [];
+    }
+
+    function moveToLocation(lat, lng) {
+      var center = new google.maps.LatLng(lat, lng);
+      // using global variable:
+      map.panTo(center);
+    }
+
+    setTimeout(function () {
+     //document.getElementById('map').style = "";
+    }, 300);
+  </script>
+
+  <script>
+    // Get data
+    function getData(id) {
+      let selectedSensor = id;
+
+      let selectedGraph;
+
+      if (document.getElementById("option1").checked){
+        selectedGraph = 0;
+      }
+      if (document.getElementById("option2").checked){
+        selectedGraph = 1;
+      }
+
+      console.log(selectedGraph);
+
+      for (i = 0; i < lineChartData.datasets.length; i++) {
+        lineChartData.datasets[i].data = [];
+      }
+
+      const myHeaders = new Headers();
+      myHeaders.append('authorization', `Bearer ${localStorage.token}`)
+
+      fetch('http://localhost:3000/api/field/sensor/' + selectedSensor, {
+          method: 'GET',
+          headers: myHeaders
+        })
+        .then(res => res.json())
+        .then(data => {
+          data.data.map(sensor => {
+            lineChartData.datasets[0].data.push(sensor.temperature);
+            lineChartData.datasets[1].data.push(sensor.humidity);
+            lineChartData.datasets[2].data.push(sensor.salinity);
+            lineChartData.datasets[3].data.push(sensor.lighting);
+            lineChartData.datasets[4].data.push(sensor.pressure);
+          })
+        })
+
+      setTimeout(function () {
+        window.myLine[selectedGraph].update();
+      }, 200);
+
+    }
+  </script>
+
+  <script>
+    var lineChartData = {
+      responsive: true,
+      labels: [24, 01, 02, 03],
+      datasets: [{
+          label: "Temperatura",
+          borderColor: window.chartColors.red,
+          backgroundColor: window.chartColors.red,
+          fill: false,
+          data: [],
+          yAxisID: 'y-axis-1',
+        },
+        {
+          label: "Humedad",
+          borderColor: window.chartColors.blue,
+          backgroundColor: window.chartColors.blue,
+          fill: false,
+          data: [],
+          yAxisID: 'y-axis-1',
+        },
+        {
+          label: "Salinidad",
+          borderColor: window.chartColors.green,
+          backgroundColor: window.chartColors.green,
+          fill: false,
+          data: [],
+          yAxisID: 'y-axis-1',
+        },
+        {
+          label: "Iluminación",
+          borderColor: window.chartColors.yellow,
+          backgroundColor: window.chartColors.yellow,
+          fill: false,
+          data: [],
+          yAxisID: 'y-axis-1',
+        },
+        {
+          label: "Presión",
+          borderColor: window.chartColors.orange,
+          backgroundColor: window.chartColors.orange,
+          fill: false,
+          data: [],
+          yAxisID: 'y-axis-1',
+        }
+      ]
+    };
+
+    window.onload = function () {
+      var chart1 = document.getElementById('canvas').getContext('2d');
+      var chart2 = document.getElementById('canvas2').getContext('2d');
+
+      initChart(chart1);
+      initChart(chart2);
+
+    };
+
+    var iCont = 0;
+    myLine = [];
+
+    function initChart (ctx){
+      window.myLine[iCont] = Chart.Line(ctx, {
+        data: lineChartData,
+        options: {
+          responsive: true,
+          hoverMode: 'index',
+          stacked: false,
+          title: {
+            display: true,
+            text: ''
+          },
+          scales: {
+            yAxes: [{
+              type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+              display: true,
+              position: 'left',
+              id: 'y-axis-1',
+            }, {
+              type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+              display: true,
+              position: 'right',
+              id: 'y-axis-2',
+
+              // grid line settings
+              gridLines: {
+                drawOnChartArea: false, // only want the grid lines for one axis to show up
+              },
+            }],
+          }
+        }
+      });
+      iCont++;
+    }
+  </script>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQXAYBqsPqkLxzNs6_LO2iBD-YlYJfvIY&callback=initMap"></script>
+
+
+
+</body>
+
+</html>

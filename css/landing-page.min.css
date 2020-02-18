@@ -1,0 +1,347 @@
+@media (max-width: 1125px) {
+    .phone {
+      display: none;
+    }
+  }
+  .bocatas{
+      width: 50%;
+  }
+
+  .bg-custom-dark{
+      background-color: #192129;
+      color: white;
+  }
+
+  a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+body {
+    font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #F7F7F7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700
+}
+
+header.masthead {
+    position: relative;
+    background-color: #F7F7F7;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top: 8rem;
+    padding-bottom: 8rem
+}
+
+header.masthead .overlay {
+    position: absolute;
+    background-color: #F7F7F7;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: .3
+}
+
+header.masthead h1 {
+    font-size: 2rem
+}
+
+@media (min-width:768px) {
+    header.masthead {
+        padding-top: 6rem;
+        padding-bottom: 6rem
+    }
+    header.masthead h1 {
+        font-size: 3rem
+    }
+}
+
+.showcase .showcase-text {
+    padding: 3rem
+}
+
+.showcase .showcase-img {
+    min-height: 30rem;
+    background-size: cover
+}
+
+@media (min-width:768px) {
+    .showcase .showcase-text {
+        padding: 7rem
+    }
+}
+
+.features-icons {
+    padding-top: 7rem;
+    padding-bottom: 7rem
+}
+
+.features-icons .features-icons-item {
+    max-width: 20rem
+}
+
+.features-icons .features-icons-item .features-icons-icon {
+    height: 7rem
+}
+
+.features-icons .features-icons-item .features-icons-icon i {
+    font-size: 4.5rem
+}
+
+.features-icons .features-icons-item:hover .features-icons-icon i {
+    font-size: 5rem
+}
+
+.testimonials {
+    padding-top: 7rem;
+    padding-bottom: 7rem
+}
+
+.testimonials .testimonial-item {
+    max-width: 18rem
+}
+
+.testimonials .testimonial-item img {
+    max-width: 12rem;
+    box-shadow: 0 5px 5px 0 #adb5bd
+}
+
+.call-to-action {
+    position: relative;
+    background-color: white;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top: 7rem;
+    padding-bottom: 7rem
+}
+
+.call-to-action .overlay {
+    position: absolute;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: .3
+}
+
+footer.footer {
+    padding-top: 2rem;
+    padding-bottom: 2rem
+}
+
+/* CUSTOM */
+.bg-custom {
+    background-color: #0E1C25 !important;
+}
+
+.navbar-brand img {
+    width: 50%;
+}
+
+.btn-primary {
+    background-color: #F19901;
+    border-color: #B17B17;
+}
+
+.btn-primary:hover {
+    background-color:rgb(214, 136, 0);
+    border-color: rgb(214, 136, 0);
+}
+.btn-primary:focus {
+    background-color: #B17B17;
+    border-color: #B17B17;
+}
+
+.btn-primary:active:focus {
+    background-color: #B17B17;
+    border-color: #B17B17;
+}
+primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #F19901;
+    border-color: #F19901;
+}
+
+.text-primary {
+    color: #313131 !important;
+}
+
+.pc-image{
+    width: 50%;
+}
+.features-icons{
+    color: #313131;
+}
+
+.dark-orange{
+    color: #AD7703;
+}
+
+.light-orange{
+    color: #F09800;
+}
+
+.btn:focus, .btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+   
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+#login-modal .modal-dialog {
+    width: 350px;
+}
+
+#login-modal input[type=text], input[type=password] {
+	margin-top: 10px;
+}
+
+#div-login-msg,
+#div-lost-msg,
+#div-register-msg {
+    border: 1px solid #dadfe1;
+    height: 30px;
+    line-height: 28px;
+    transition: all ease-in-out 500ms;
+}
+
+#div-login-msg.success,
+#div-lost-msg.success,
+#div-register-msg.success {
+    border: 1px solid #68c3a3;
+    background-color: #c8f7c5;
+}
+
+#div-login-msg.error,
+#div-lost-msg.error,
+#div-register-msg.error {
+    border: 1px solid #eb575b;
+    background-color: #ffcad1;
+}
+
+#icon-login-msg,
+#icon-lost-msg,
+#icon-register-msg {
+    width: 30px;
+    float: left;
+    line-height: 28px;
+    text-align: center;
+    background-color: #dadfe1;
+    margin-right: 5px;
+    transition: all ease-in-out 500ms;
+}
+
+#icon-login-msg.success,
+#icon-lost-msg.success,
+#icon-register-msg.success {
+    background-color: #68c3a3 !important;
+}
+
+#icon-login-msg.error,
+#icon-lost-msg.error,
+#icon-register-msg.error {
+    background-color: #eb575b !important;
+}
+
+#img_logo {
+    max-height: 100px;
+    max-width: 100px;
+}
+
+/* #########################################
+   #    override the bootstrap configs     #
+   ######################################### */
+
+.modal-backdrop.in {
+    filter: alpha(opacity=50);
+    opacity: .8;
+}
+
+.modal-content {
+    background-color: #ececec;
+    border: 1px solid #bdc3c7;
+    border-radius: 0px;
+    outline: 0;
+}
+
+.modal-header {
+    min-height: 16.43px;
+    padding: 15px 15px 15px 15px;
+    border-bottom: 0px;
+}
+
+.modal-body {
+    position: relative;
+    padding: 5px 15px 5px 15px;
+}
+
+.modal-footer {
+    padding: 15px 15px 15px 15px;
+    text-align: left;
+    border-top: 0px;
+}
+
+.checkbox {
+    margin-bottom: 0px;
+}
+
+.btn {
+    border-radius: 0px;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+    outline: none;
+}
+
+.btn-lg, .btn-group-lg>.btn {
+    border-radius: 0px;
+}
+
+.btn-link {
+    padding: 5px 10px 0px 0px;
+    color: #95a5a6;
+}
+
+.btn-link:hover, .btn-link:focus {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.glyphicon {
+    top: 0px;
+}
+
+.form-control {
+  border-radius: 0px;
+}
+
+.bg-white{
+    background-color: white;
+}

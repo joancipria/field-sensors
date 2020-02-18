@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>GTI | PW7</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/landing-page.min.css" rel="stylesheet">
+  <script src="js/Chart.bundle.js"></script>
+  <script src="js/utils.js"></script>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-light bg-custom static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img class="phone" src="img/logoGTIw.png" alt="">
+      </a>
+      <a role="button" data-toggle="modal" data-target="#login-modal" class="btn btn-primary" href="#">Iniciar sesión</a>
+    </div>
+  </nav>
+
+  <!-- Masthead -->
+  <header class="masthead text-white text-center">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 order-lg-2 text-white showcase-img text-center">
+          <img class="bocatas" src="img/bocadillo1.png" alt="">
+          <img class="bocatas" src="img/bocadillo2.png" alt="">
+          </div>
+          <div class="col-lg-6 order-lg-2 text-white showcase-img text-center">
+            <img width="100%" src="img/phone.png" alt=""><br><br>
+            <button class="btn btn-lg btn-primary">Más información</button>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Graph -->
+  <section class="text-center bg-white">
+    <div class="container">
+      <h3 style="padding-top: 2rem;">Visualiza los datos de tus sensores en tiempo
+        <b class="light-orange">REAL</b>
+      </h3>
+      <div class="row">
+
+        <div style="width:100%;padding-bottom: 2rem;">
+          <canvas id="canvas"></canvas>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Image Showcases -->
+  <section class="showcase">
+    <div class="container-fluid p-0">
+      <div class="row no-gutters">
+
+        <div class="col-lg-6 order-lg-2 text-white showcase-img text-center">
+          <div class="features-icons text-center">
+            <h3>Todo esto y mucho más
+              <br> sin importar
+              <b>TU DISPOSITIVO</b>
+            </h3>
+            <br>
+            <h4 class="dark-orange">¿A que estás esperando?</h4>
+            <br>
+            <img class="pc-image" src="img/pc.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+
+          <!-- Icons Grid -->
+          <div class="features-icons text-center">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                    <div class="features-icons-icon d-flex">
+                      <i class="icon-clock m-auto text-primary"></i>
+                    </div>
+                    <h3>Sin límites</h3>
+                    <p class="lead mb-0">Consulta tus datos
+                      <b>al instante</b>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                    <div class="features-icons-icon d-flex">
+                      <i class="icon-home m-auto text-primary"></i>
+                    </div>
+                    <h3>Fácilidad</h3>
+                    <p class="lead mb-0">No necesitas moverte, mola eh?</p>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                    <div class="features-icons-icon d-flex">
+                      <i class="icon-envelope m-auto text-primary"></i>
+                    </div>
+                    <h3>Contacta</h3>
+                    <p class="lead mb-0">Si necesitas ayuda, no dudes y 
+                      <b>háblanos.</b>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Call to Action -->
+  <section class="call-to-action text-white text-center bg-white">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+            <h3 style="color: #343434;">Todo lo que necesitas es darle a <b>un botón</b> </h3><br>
+            <button type="submit" class="btn btn-lg btn-primary">Contacto</button>
+        </div>
+        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-custom-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+          <ul class="list-inline mb-2">
+            <li class="list-inline-item">
+              <a href="#">About</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Contact</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Terms of Use</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Privacy Policy</a>
+            </li>
+          </ul>
+          <p class="text-muted small mb-4 mb-lg-0">&copy; GTI-G7 2018. All Rights Reserved.</p>
+        </div>
+        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+         <img width="35%" src="img/logoGTIw.png" alt="">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- BEGIN # MODAL LOGIN -->
+  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header text-center" align="center">
+          <img width="30%" class="img-circle" id="img_logo" src="img/logoGTIb.png">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <i class="icon-close m-auto text-primary"></i>
+            </button>
+        </div>
+
+        <!-- Begin # DIV Form -->
+        <div id="div-forms">
+
+          <!-- Begin # Login Form -->
+          <form id="login" method="POST">
+            <div class="modal-body">
+              <div id="div-login-msg">
+                <div style="color:red;" id="status" class="glyphicon glyphicon-chevron-right">
+                </div>
+              </div><br>
+              <input id="email" class="form-control" type="email" placeholder="Email" required>
+              <input id="password" class="form-control" type="password" placeholder="Contraseña" required><br>
+              <button type="submit" class="btn btn-primary btn-lg btn-block">Iniciar Sesión</button>
+
+            </div>
+          </form>
+          <!-- End # Login Form -->
+
+          <!-- Begin | Lost Password Form -->
+          <form id="lost-form" style="display:none;">
+            <div class="modal-body">
+              <div id="div-lost-msg">
+                <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
+                <span id="text-lost-msg">Type your e-mail.</span>
+              </div>
+              <input id="lost_email" class="form-control" type="text" placeholder="E-Mail (type ERROR for error effect)" required>
+            </div>
+            <div class="modal-footer">
+              <div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+              </div>
+              <div>
+                <button id="lost_login_btn" type="button" class="btn btn-link">Log In</button>
+                <button id="lost_register_btn" type="button" class="btn btn-link">Register</button>
+              </div>
+            </div>
+          </form>
+          <!-- End | Lost Password Form -->
+
+          <!-- Begin | Register Form -->
+          <form id="register-form" style="display:none;">
+            <div class="modal-body">
+              <div id="div-register-msg">
+                <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                <span id="text-register-msg">Register an account.</span>
+              </div>
+              <input id="register_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
+              <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
+              <input id="register_password" class="form-control" type="password" placeholder="Password" required>
+            </div>
+            <div class="modal-footer">
+              <div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+              </div>
+              <div>
+                <button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
+                <button id="register_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
+              </div>
+            </div>
+          </form>
+          <!-- End | Register Form -->
+
+        </div>
+        <!-- End # DIV Form -->
+
+      </div>
+    </div>
+  </div>
+  <!-- END # MODAL LOGIN -->
+
+      <script>
+        'use strict'
+        const formLogin = document.getElementById('login')
+        formLogin.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch('http://localhost:3000/api/signin', {
+              method: 'POST',
+              body: JSON.stringify({
+                email: document.getElementById('email').value,
+                password: document.getElementById('password').value
+              }),
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              credentials: 'same-origin'
+            })
+            .then(res => res.json())
+            .then(data => { 
+              localStorage.setItem('token', data.token);
+              localStorage.setItem('email', data.email);
+              localStorage.setItem('avatar', "img/example.jpg");
+              localStorage.setItem('displayName', "Joan");
+
+              document.getElementById('status').innerHTML = data.message;
+              if (data.message == "Te has logueado correctamente"){
+                document.getElementById('status').style.color = "green";
+                location.href = "dashboard.html";
+              }
+            })
+            .catch(function(error) {
+                document.getElementById('status').innerHTML = data.message;
+            });
+        })
+      </script>
+
+
+
+
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script>
+    var lineChartData = {
+      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+      datasets: [{
+        label: '',
+        borderColor: window.chartColors.red,
+        backgroundColor: window.chartColors.red,
+        fill: false,
+        data: [
+          randomScalingFactor(),
+          randomScalingFactor(),
+          randomScalingFactor(),
+          randomScalingFactor(),
+          randomScalingFactor(),
+          randomScalingFactor(),
+          randomScalingFactor()
+        ],
+        yAxisID: 'y-axis-1',
+      }, {
+        label: '',
+        borderColor: window.chartColors.blue,
+        backgroundColor: window.chartColors.blue,
+        fill: false,
+        data: [
+          randomScalingFactor(),
+          randomScalingFactor(),
+          randomScalingFactor(),
+          randomScalingFactor(),
+          randomScalingFactor(),
+          randomScalingFactor(),
+          randomScalingFactor()
+        ],
+        yAxisID: 'y-axis-2'
+      }]
+    };
+
+    window.onload = function () {
+      Chart.defaults.global.legend.display = false;
+      Chart.defaults.global.tooltips.enabled = false;
+      var ctx = document.getElementById('canvas').getContext('2d');
+      window.myLine = Chart.Line(ctx, {
+        data: lineChartData,
+        options: {
+          responsive: true,
+          hoverMode: 'index',
+          stacked: false,
+          title: {
+            display: false,
+            text: 'Chart.js Line Chart - Multi Axis'
+          },
+          scales: {
+            yAxes: [{
+              type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+              display: false,
+              position: 'left',
+              id: 'y-axis-1',
+            }, {
+              type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+              display: false,
+              position: 'right',
+              id: 'y-axis-2',
+
+              // grid line settings
+              gridLines: {
+                drawOnChartArea: false, // only want the grid lines for one axis to show up
+              },
+            }],
+          }
+        }
+      });
+    };
+
+
+    setInterval(
+      function () {
+        lineChartData.datasets.forEach(function (dataset) {
+          dataset.data = dataset.data.map(function () {
+            return randomScalingFactor();
+          });
+        });
+
+        window.myLine.update();
+      }, 1300);
+
+      localStorage.setItem('token', undefined);
+  </script>
+</body>
+
+</html>
